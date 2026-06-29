@@ -12,6 +12,11 @@ Construído com **React 19 + TypeScript + Vite**, usando **Tailwind CSS v4**,
 **shadcn/ui**, **React Router**, **React Hook Form**, **Zod** e **Sonner**
 (toasts).
 
+<img width="1895" height="904" alt="Image" src="https://github.com/user-attachments/assets/3dd189d3-43e4-4d17-b31c-d6e1493b32a5" />
+
+<img width="1905" height="903" alt="Image" src="https://github.com/user-attachments/assets/afca43e8-7c96-472a-ba9c-2aecb119f169" />
+
+
 ## Pré-requisitos
 
 - Node.js 20+ (testado com Node 22)
