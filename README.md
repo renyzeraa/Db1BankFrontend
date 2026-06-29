@@ -1,8 +1,16 @@
 # DB1 Bank Express — Frontend
 
-Frontend para consumir a API REST do projeto **DB1BankExpress**.
+Aplicação frontend do projeto **DB1BankExpress**, criada para oferecer a
+interface de cadastro, listagem, edição e exclusão de clientes consumindo a
+API REST do backend.
+
+Este projeto foi desenvolvido **100% a partir de spec** e com apoio de
+**IA**, usando a especificação como fonte principal para orientar estrutura,
+fluxos, contrato de integração e decisões de interface.
+
 Construído com **React 19 + TypeScript + Vite**, usando **Tailwind CSS v4**,
-**shadcn/ui**, **React Router**, **React Hook Form**, **Zod** e **Sonner** (toasts).
+**shadcn/ui**, **React Router**, **React Hook Form**, **Zod** e **Sonner**
+(toasts).
 
 ## Pré-requisitos
 
