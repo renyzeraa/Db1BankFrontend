@@ -20,7 +20,7 @@ interface DataRowProps {
   mono?: boolean;
 }
 
-function DataRow({ icon, label, value, mono }: DataRowProps) {
+function DataRow({ icon, label, value, mono }: Readonly<DataRowProps>) {
   return (
     <div className="flex items-center gap-2.5 text-sm">
       <span className="text-muted-foreground [&_svg]:size-4">{icon}</span>

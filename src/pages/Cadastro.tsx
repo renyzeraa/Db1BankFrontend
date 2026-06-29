@@ -106,10 +106,14 @@ export function Cadastro() {
         });
 
         if (!getValues("address.addtionalInformation")) {
-          setValue("address.addtionalInformation", address.addtionalInformation, {
-            shouldDirty: true,
-            shouldValidate: true,
-          });
+          setValue(
+            "address.addtionalInformation",
+            address.addtionalInformation,
+            {
+              shouldDirty: true,
+              shouldValidate: true,
+            },
+          );
         }
       } catch (err) {
         if (cancelled) return;
@@ -276,7 +280,9 @@ export function Cadastro() {
                     maxLength={15}
                     {...register("cellPhoneNumber", {
                       onChange: (event) => {
-                        event.target.value = formatPhoneInput(event.target.value);
+                        event.target.value = formatPhoneInput(
+                          event.target.value,
+                        );
                       },
                     })}
                   />
@@ -318,7 +324,9 @@ export function Cadastro() {
                     maxLength={16}
                     {...register("monthlyIncome", {
                       onChange: (event) => {
-                        event.target.value = formatMoneyInput(event.target.value);
+                        event.target.value = formatMoneyInput(
+                          event.target.value,
+                        );
                       },
                     })}
                   />
@@ -413,8 +421,12 @@ export function Cadastro() {
                 <Field
                   label="CEP"
                   htmlFor="address.cep"
-                  error={errors.address?.cep?.message ?? cepLookupError ?? undefined}
-                  hint={isFetchingCep ? "Buscando endereco pelo CEP..." : undefined}
+                  error={
+                    errors.address?.cep?.message ?? cepLookupError ?? undefined
+                  }
+                  hint={
+                    isFetchingCep ? "Buscando endereco pelo CEP..." : undefined
+                  }
                   required
                 >
                   <Input

@@ -23,21 +23,21 @@ export const customerCreateSchema = z.object({
   fatherName: z.string().min(1, "Informe o nome do pai"),
   email: z.email("Informe um e-mail valido"),
   password: z.string().min(6, "A senha deve ter ao menos 6 caracteres"),
-  cellPhoneNumber: z
-    .string()
-    .refine((value) => {
-      const digits = onlyDigits(value);
-      return digits.length === 10 || digits.length === 11;
-    }, "Informe um telefone valido"),
+  cellPhoneNumber: z.string().refine((value) => {
+    const digits = onlyDigits(value);
+    return digits.length === 10 || digits.length === 11;
+  }, "Informe um telefone valido"),
   monthlyIncome: z
     .string()
     .min(1, "Informe a renda mensal")
     .refine(isValidMoney, "Renda invalida (use apenas numeros)"),
   documents: z.object({
     rgDocument: z.string().min(1, "Informe o RG"),
-    securityNumber: z.string().refine((value) => onlyDigits(value).length === 11, {
-      message: "Informe um CPF valido",
-    }),
+    securityNumber: z
+      .string()
+      .refine((value) => onlyDigits(value).length === 11, {
+        message: "Informe um CPF valido",
+      }),
     issuingInstitution: z.string().min(1, "Informe o orgao emissor"),
     uf: z.string().regex(ufRegex, "UF deve ter 2 letras"),
   }),
